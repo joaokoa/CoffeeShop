@@ -166,9 +166,11 @@ ul {
 
 .container-categoria button {
     display: block;
-    width: 15vw;
+    width: 10vw;
     padding: 8px;
+    margin-top: 20px;
     margin-bottom: 15px;
+    border-radius: 7px;
     text-align: left;
     border: none;
     background-color: #e0e0e0; /* Cor de fundo dos botões */
@@ -177,14 +179,15 @@ ul {
 }
 
 .container-categoria button:hover {
-    background-color: #c0c0c0; /* Cor de fundo dos botões ao passar o mouse */
+    background-color: #77ffc0; /* Cor de fundo dos botões ao passar o mouse */
+    transition: 0.3s all
 }
 
 .container-produtos {
   background-color: #2f2841;
   margin: 2vw;
   padding: 15px;
-  width: 1000px;
+  width: 60vw;
   height: 500px;
   display: flex;
   flex-direction: column;
@@ -194,7 +197,7 @@ ul {
 .row-produtos{
   margin: 15px;
   background-color: #514869;
-  width: 950px;
+  width: 55vw;
   height: 300px;
 }
 
