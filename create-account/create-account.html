@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>Spooky Coffee</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="create-account.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   </head>
   <body>
@@ -12,7 +12,7 @@
         </div>
       
         <ul>
-          <a href="#"><li>Início</li></a>
+          <a href="../home/index.html"><li>Início</li></a>
           <a href="../store/store-page.html"><li>Cafés</li></a>
           <a href="#"><li>Sobre</li></a>
           <a href="#"><li>Contato</li></a>
@@ -21,19 +21,22 @@
     </header>
 
     <main>
-      <!-- <aside>
+      <aside>
         <h2><span>Crie já sua conta</span></h2>
         <h2>e faça seu pedido!</h2>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-        <form>
-          <input type="text" placeholder="Login">
-          <input type="password" placeholder="Senha">
-          <input type="submit" value="Criar conta">
-        </form>
-      </aside> -->
+        <div>
+          <input id="email" type="text" placeholder="Email">
+          <input id="nome" type="text" placeholder="Nome completo">
+          <input id="senha" type="password" placeholder="Senha">
+          <button onclick="getData()" type="submit" value="Criar conta">Criar conta</button>
+          
+          </div>
+      </aside>
 
       <article>
         <img src="../assets/coffee.png" alt="coffee-shop">
       </article>
     </main>
+    <script src="create-account.js"></script>
 </body>
