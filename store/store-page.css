@@ -139,10 +139,14 @@ input{
 }
  
 .container-categoria {
-  background-color: #2f2841;
-  margin: 20px; /* Espaçamento externo */
-  padding: 20px; /* Espaçamento interno */
-  border-radius: 10px;
+    background-color: #2f2841; /* Cor de fundo do painel */
+    margin: 2vw;
+    padding: 15px; /* Espaçamento interno */
+    width: 200px; /* Largura do painel de categoria */
+    height: 500px; /* Altura do painel de categoria */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 ul {
@@ -151,8 +155,6 @@ ul {
 }
 
 .div-main {
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: row;
 
@@ -162,69 +164,43 @@ ul {
     list-style: none; /* Remover marcadores de lista */
 }
 
-.container-produtos {
-  background-color: #2f2841;
-  margin: 20px; /* Aumentei a margem para separar melhor os conteúdos */
-  padding: 20px; /* Espaçamento interno um pouco maior */
-  border-radius: 10px; /* Cantos arredondados */
-  flex: 1; /* Ocupar o máximo de espaço possível */
-  margin: 20px 20px 0 20px; /* Ajuste do espaçamento entre container-categoria e container-produtos */
-  padding: 20px;
-  border-radius: 10px;
-  background-color: #2f2841;
-}
-
-/* Estilo para os botões das categorias */
-.container-categoria button,
-.container-produtos .produto .buttonComprar {
-  display: block;
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border-radius: 7px;
-  text-align: center;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s; /* Transição suave ao passar o mouse */
-}
-
-.container-produtos .row-produtos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-.container-produtos .produto {
-  background-color: #4e4568;
-  flex: 0 0 calc(30% - 20px);
-  margin-bottom: 20px;
-  border-radius: 10px;
-  padding: 15px;
-  color: #fff;
-}
-
-.container-produtos .produto h5,
-.container-produtos .produto p {
-  margin: 5px 0;
-}
-
 .container-categoria button {
-  background-color: #6c5ce7; /* Roxo */
-  color: #fff; /* Cor do texto dos botões de categoria */
+    display: block;
+    width: 10vw;
+    padding: 8px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    border-radius: 7px;
+    text-align: left;
+    border: none;
+    background-color: #e0e0e0; /* Cor de fundo dos botões */
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .container-categoria button:hover {
-  background-color: #7fff00; /* Verde */
-  color:  #000; /* Mudança de cor do texto ao passar o mouse */
+    background-color: #77ffc0; /* Cor de fundo dos botões ao passar o mouse */
+    transition: 0.3s all
 }
 
-.container-produtos .produto .buttonComprar {
-  background-color: #7fff00; /* Verde */
-  color: #000; /* Cor do texto dos botões de compra */
+.container-produtos {
+  background-color: #2f2841;
+  margin: 2vw;
+  padding: 15px;
+  width: 60vw;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.container-produtos .produto .buttonComprar:hover {
-  background-color: #6c5ce7; /* Roxo */
-  color: #fff; /* Mudança de cor do texto ao passar o mouse */
+.row-produtos{
+  margin: 15px;
+  background-color: #514869;
+  width: 55vw;
+  height: 300px;
 }
+
+.container-produtos table{
+    justify-content: center;
+  }
