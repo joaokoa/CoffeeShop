@@ -104,7 +104,7 @@ async function handleProductData(categoriaId) {
 
                 const divProduto = document.createElement('div');
                 divProduto.classList.add('produto');
-                
+
                 // Adicione o conteúdo da div do produto (por exemplo, nome, descrição, preço, etc.)
                 divProduto.innerHTML = `<h5>${produto.nome}</h5><p>${produto.description}</p><p>R$${produto.preco}</p>`;
 
@@ -189,39 +189,14 @@ function handleCategoryData() {
     dados.then(categorias => {
         const ulElement = document.getElementById('categorias-lista');
 
-        // Adicionar botão para remover filtros
-        const removeFiltersButton = document.createElement('button');
-        removeFiltersButton.textContent = 'Mostrar Todos';
-        removeFiltersButton.addEventListener('click', () => {
-            // Remover classe de destaque de todos os botões
-            const buttons = ulElement.querySelectorAll('button');
-            buttons.forEach(btn => {
-                btn.classList.remove('categoria-selecionada');
-            });
-
-            // Lógica para remover os filtros aplicados e exibir todos os produtos
-            handleAwakeHandle();
-        });
-
-        ulElement.appendChild(removeFiltersButton);
-
         categorias.forEach(categoria => {
             const liElement = document.createElement('li');
             const buttonElement = document.createElement('button');
 
             buttonElement.textContent = categoria.nome; // Substitua 'nome' pelo nome do atributo que contém o nome da categoria
             buttonElement.addEventListener('click', () => {
-                // Remover classe de destaque de todos os botões
-                const buttons = ulElement.querySelectorAll('button');
-                buttons.forEach(btn => {
-                    btn.classList.remove('categoria-selecionada');
-                });
-
-                // Destacar categoria selecionada
-                buttonElement.classList.add('categoria-selecionada');
-
                 // Lógica para lidar com o clique no botão da categoria, se necessário
-                switch (categoria.nome) {
+                switch(categoria.nome) {
                     case "Cafés":
                         handleProductData(1);
                         break;
@@ -236,6 +211,7 @@ function handleCategoryData() {
         });
     });
 }
+
 
 handleCategoryData();
 handleAwakeHandle();
