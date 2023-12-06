@@ -190,3 +190,66 @@ footer a:hover {
 footer .social-links a {
   font-weight: bold;
 }
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #title {
+    margin-top: 20px;
+  }
+
+#inscreva-se-btn, #logout-btn {
+    margin-top: 20px;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+  .div-main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container-categoria,
+  .container-produtos {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #2f2841;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container-produtos .produto {
+    flex: 0 0 calc(50% - 10px);
+    margin-bottom: 20px;
+  }
+
+  .container-produtos .row-produtos {
+    justify-content: center;
+  }
+
+  .container-categoria button,
+  .container-produtos .produto .buttonComprar {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  footer {
+    padding: 15px;
+  }
+
+  footer * {
+    margin: 5px 0;
+  }
+
+  footer .social-links a {
+    font-weight: normal;
+  }
+}

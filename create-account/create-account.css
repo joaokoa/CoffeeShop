@@ -160,31 +160,76 @@ footer .social-links a {
 }
 
 
-@media screen and (max-width: 660px){
-  body{
+@media screen and (max-width: 660px) {
+  body {
     flex-direction: column;
     text-align: center;
-  }
-  
-  main{
-    flex-direction: column;
   }
 
-  h2{
-    text-align: center;
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #title {
+    margin-top: 20px;
+  }
+
+#inscreva-se-btn, #logout-btn {
+    margin-top: 20px;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h2 {
     font-size: 20px;
+    line-height: 1.5;
   }
 
-  form{
+  form {
+    width: 90%;
     margin: 0 auto;
-    width: 100%;
-  }
-  
-  input{
-    align-self: center;
+    align-items: center;
   }
 
-  img{
-    display: none;
+  form [type="submit"] {
+    width: 80%;
+    margin-top: 20px;
+  }
+
+  input {
+    width: 80%;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  article {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  img {
+    width: 90%;
+    margin: 20px auto;
+    max-width: 100%;
+  }
+
+  footer {
+    padding: 15px;
+  }
+
+  footer * {
+    margin: 5px 0;
+  }
+
+  footer .social-links a {
+    font-weight: normal;
   }
 }
