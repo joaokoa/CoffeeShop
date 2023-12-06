@@ -1,3 +1,11 @@
+function checkToken() {
+    let token = localStorage.getItem('token');
+   // Verifica se o token é null ou undefined
+    if (token === null || token === undefined) {
+        localStorage.setItem('token', 0);
+    }
+}
+
 function getProductData() {
     let produtos = [];
     const url = "http://localhost:3333/produtos";
@@ -135,9 +143,9 @@ async function handleProductData(categoriaId) {
 }
 
 
-async function handleAwakeHandle() {
+async function handleAwake() {
     let token = localStorage.getItem('token');
-
+    // alert(token);
     // Se o token for igual a 1, oculte o link "Já tem uma conta?"
     if (token == 1) {
         //alert('O usuário está logado.')
@@ -238,7 +246,7 @@ function handleCategoryData() {
             });
 
             // Lógica para remover os filtros aplicados e exibir todos os produtos
-            handleAwakeHandle();
+            handleAwake();
         });
 
         ulElement.appendChild(removeFiltersButton);
@@ -275,5 +283,6 @@ function handleCategoryData() {
     });
 }
 
+checkToken();
 handleCategoryData();
-handleAwakeHandle();
+handleAwake();
