@@ -6,7 +6,7 @@ function getData() {
         return
     } 
 
-    const url = "http://localhost:3333/usuarios";
+    const url = "https://api-sd-oqhn.onrender.com/usuarios";
     const dadosParaEnviar = {
         email: email,
         senha: senha
@@ -66,7 +66,7 @@ function loginUser() {
         return;
     }
 
-    const url = "http://localhost:3333/login";
+    const url = "https://api-sd-oqhn.onrender.com/login";
     const dadosParaEnviar = {
         email: email,
         senha: senha

@@ -8,7 +8,7 @@ function checkToken() {
 
 function getProductData() {
     let produtos = [];
-    const url = "http://localhost:3333/produtos";
+    const url = "https://api-sd-oqhn.onrender.com/produtos";
     return fetch(url, {
         method: 'GET',
         headers: {
@@ -34,8 +34,7 @@ function getProductData() {
     .then(data => {
         // Faça algo com os dados, se necessário
         produtos = data;
-        // console.log(produtos);
-        // alert('Produtos obtidos com sucesso!');
+        
         // Retorne os produtos se necessário
         return produtos;
     })
@@ -46,7 +45,7 @@ function getProductData() {
 
 function getCategoryData() {
     let produtos = [];
-    const url = "http://localhost:3333/categoria";
+    const url = "https://api-sd-oqhn.onrender.com/categoria";
     return fetch(url, {
         method: 'GET',
         headers: {
@@ -72,8 +71,7 @@ function getCategoryData() {
     .then(data => {
         // Faça algo com os dados, se necessário
         produtos = data;
-        // console.log(produtos);
-        //alert('Produtos obtidos com sucesso!');
+
         // Retorne os produtos se necessário
         return produtos;
     })
@@ -87,8 +85,6 @@ async function handleProductData(categoriaId) {
     
     try {
         // Obtenha os dados dos produtos
-
-
 
         const dados = await getProductData();
 
