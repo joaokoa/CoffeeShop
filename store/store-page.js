@@ -137,18 +137,17 @@ async function handleProductData(categoriaId) {
 
 async function handleAwakeHandle() {
     let token = localStorage.getItem('token');
-    alert(token);
 
     // Se o token for igual a 1, oculte o link "Já tem uma conta?"
     if (token == 1) {
-        alert('O usuário está logado.')
+        //alert('O usuário está logado.')
         const inscrevaSeBtn = document.getElementById('inscreva-se-btn');
         inscrevaSeBtn.style.display = 'none'; // Ou 'inline', ou qualquer valor desejado para exibir
     }
 
     // Se o token for igual a 0,
     if (token == 0) {
-        alert('O usuário está deslogado.')
+        //alert('O usuário está deslogado.')
         const logoutBtn = document.getElementById('logout-btn');
         logoutBtn.style.display = 'none'; // Ou 'inline', ou qualquer valor desejado para exibir
     }
@@ -211,7 +210,7 @@ async function handleAwakeHandle() {
 function handleAuthentication() {
     const token = localStorage.getItem('token');
     if (token == 1) {
-        alert('Compra realizada com sucesso!');
+        alert('Produto adicionado ao carrinho de compras');
     }
 };
 
@@ -277,4 +276,4 @@ function handleCategoryData() {
 }
 
 handleCategoryData();
-handleAwakeHandle()
+handleAwakeHandle();

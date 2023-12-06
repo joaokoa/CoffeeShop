@@ -31,12 +31,17 @@ a{
   color: white;
 }
 
-a:hover{
+ul a:hover{
   color: #77ffc0;
   transition: 0.3s all;
 }
 
-#inscreva-se-btn{
+h1{
+  font-weight: 200;
+}
+ 
+#inscreva-se-btn,
+#logout-btn{
   border: 2px solid #77ffc0;
   padding: 10px;
   border-radius: 15px;
@@ -44,110 +49,16 @@ a:hover{
   background-color: #00ff88;
   color: #2b134b;
   box-shadow: 0px 10px 40px -12px #00ff8052;
-}
-
-
-h1{
-  font-weight: 200;
-}
-
-main{
-  display: flex;
-  flex-direction: row;
-  margin-top: 50px;
-}
-
-h2{
-  font-size: 3vw;
-  line-height: 10px;
-}
-
-span{
-  color: #77ffc0;
-}
-
-p{
-  line-height: 20px;
-  max-width: 500px;
-}
-
-article{
-  display: flex;
-  flex-direction: column;
-  width: 800px;
-}
-
-img{
-  display: flex;
-  flex-direction: row;
-  align-self: center;
-  width: 30vw;
-}
-
-form{
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-}
-
-form [type="submit"]{
-  height: 50px;
-  width: 50%;
-  background-color: #00ff88;
-  color: #2b134b;
-  font-weight: 800;
   cursor: pointer;
-  box-shadow: 0px 10px 40px -12px #00ff8052;
 }
 
-input{
-  margin-top: 20px;
-  height: 20px;
-  padding: 15px;
-  border-radius: 20px;
-  border: none;
-  font-size: 15px;
-}
 
-@media screen and (max-width: 660px){
-  body{
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  main{
-    flex-direction: column;
-  }
 
-  h2{
-    text-align: center;
-    font-size: 20px;
-  }
-
-  form{
-    margin: 0 auto;
-    width: 100%;
-  }
-  
-  input{
-    align-self: center;
-  }
-
-  img{
-    display: none;
-  }
-}
- 
 .container-categoria {
   background-color: #2f2841;
-  margin: 20px; /* Espaçamento externo */
-  padding: 20px; /* Espaçamento interno */
+  margin: 20px;
+  padding: 20px;
   border-radius: 10px;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
 }
 
 .div-main {
@@ -161,9 +72,9 @@ ul {
   margin: 20px;
   padding: 20px;
   border-radius: 10px;
-  height: 300px; /* Definindo uma altura fixa */
+  height: 300px;
   width: 300px;
-  overflow-y: auto; /* Adicionando rolagem vertical quando o conteúdo excede a altura */
+  overflow-y: auto;
 }
 
 .container-categoria ul {
@@ -177,11 +88,11 @@ ul {
 
 .container-produtos {
   background-color: #2f2841;
-  margin: 20px; /* Aumentei a margem para separar melhor os conteúdos */
-  padding: 20px; /* Espaçamento interno um pouco maior */
-  border-radius: 10px; /* Cantos arredondados */
-  flex: 1; /* Ocupar o máximo de espaço possível */
-  margin: 20px 20px 0 20px; /* Ajuste do espaçamento entre container-categoria e container-produtos */
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1; 
+  margin: 20px 20px 0 20px; 
   padding: 20px;
   border-radius: 10px;
   background-color: #2f2841;
@@ -198,7 +109,7 @@ ul {
   text-align: center;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s; /* Transição suave ao passar o mouse */
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .container-produtos .row-produtos {
@@ -223,55 +134,45 @@ ul {
 }
 
 .container-categoria button {
-  background-color: #6c5ce7; /* Roxo */
-  color: #fff; /* Cor do texto dos botões de categoria */
+  background-color: #6c5ce7;
+  color: #fff;
 }
 
 .container-categoria button:hover {
-  background-color: #7fff00; /* Verde */
-  color:  #000; /* Mudança de cor do texto ao passar o mouse */
+  background-color: #7fff00;
+  color:  #000;
 }
 
 .container-produtos .produto .buttonComprar {
-  background-color: #7fff00; /* Verde */
-  color: #000; /* Cor do texto dos botões de compra */
+  background-color: #7fff00;
+  color: #000; 
 }
 
 .container-produtos .produto .buttonComprar:hover {
-  background-color: #6c5ce7; /* Roxo */
-  color: #fff; /* Mudança de cor do texto ao passar o mouse */
+  background-color: #6c5ce7;
+  color: #fff;
 }
 
 .container-categoria button.categoria-selecionada {
-  background-color: #7fff00; /* Destaque para o botão selecionado */
+  background-color: #7fff00;
   color: #000;
-}
-
-.container-produtos .produto img {
-  position: absolute; /* Posiciona a imagem sobreposta ao conteúdo */
-  top: 0; /* Alinha a imagem ao topo do card do produto */
-  left: 0; /* Alinha a imagem à esquerda do card do produto */
-  width: 100%; /* Garante que a imagem ocupe 100% da largura do card */
-  height: 100%; /* Garante que a imagem ocupe 100% da altura do card */
-  object-fit: cover; /* Redimensiona a imagem para preencher o espaço sem distorcer */
-  border-radius: 10px; /* Mantém o mesmo raio de borda que o card */
 }
 
 footer {
   background-color: #2b134b;
   color: white;
   padding: 20px;
-  text-align: center; /* Alinha o conteúdo no centro */
+  text-align: center;
   max-width: 1200px;
-  margin: 0 auto; /* Centraliza horizontalmente */
+  margin: 0 auto;
   margin-top: 15px;
 }
 
 /* Estilo para todos os itens no footer */
 footer * {
   margin: 0 10px;
-  display: inline-block; /* Permite alinhar horizontalmente */
-  text-align: center; /* Alinha o texto */
+  display: inline-block;
+  text-align: center;
 }
 
 /* Estilizando os links no footer */
