@@ -1,16 +1,16 @@
 function getData() {
-    const email = document.getElementById('email').value;
     const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
     const senha = document.getElementById('senha').value;
-    if (!email || !nome || !senha) {
+    if (!nome || !email || !senha) {
         alert("Credenciais faltando");
         return
     } 
 
     const url = "https://api-sd-oqhn.onrender.com/usuarios";
     const dadosParaEnviar = {
-        email: email,
         nome: nome,
+        email: email,
         senha: senha
     };
 
@@ -18,7 +18,7 @@ function getData() {
     createAccount(url, dadosParaEnviar);
 }
 
-async function createAccount(url, dados) {
+function createAccount(url, dados) {
     return fetch(url, {
         method: 'POST',
         headers: {
