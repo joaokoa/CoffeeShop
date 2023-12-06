@@ -1,9 +1,9 @@
 <html>
   <head>
-    <title>Spooky Café - Crie sua conta</title>
     <link rel="stylesheet" href="create-account.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <title>Spooky Café - Crie sua conta</title>
   </head>
   <body>
     <header>
@@ -27,13 +27,12 @@
         <h2>Spooky Café!</h2>
         <p>Ao criar uma conta, você entra em nossa comunidade apaixonada por café. Descubra grãos premium e acessórios especiais enquanto compartilhamos dicas e histórias. No Spooky Café, vivemos a paixão pelo café em cada xícara. Junte-se a nós e comece sua jornada sensorial pelo mundo do café excepcional.
         </p>
-        <form>
+        <div id="form">
           <input id="email" type="text" placeholder="Email">
           <input id="nome" type="text" placeholder="Nome completo">
           <input id="senha" type="password" placeholder="Senha">
-          <button class="create-btn" onclick="getData();" type="submit" value="Criar conta">Criar conta</button>
-          
-        </form>
+          <button id="create-btn" onclick="getData();">Criar conta</button>
+        </div>
       </aside>
 
       <article>

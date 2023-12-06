@@ -3,7 +3,7 @@ function getData() {
     const email = document.getElementById('email').value;
     const senha = document.getElementById('senha').value;
     if (!nome || !email || !senha) {
-        alert("Credenciais faltando");
+        alert("Campos preenchidos incorretamente");
         return
     } 
 

@@ -49,7 +49,6 @@ function createAccount(url, dados) {
     });
 }
 
-
 document.getElementById('senha').addEventListener('keyup', function(event) {
     if (event.keyCode === 13) {
         event.preventDefault();

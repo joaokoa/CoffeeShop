@@ -97,13 +97,13 @@ img{
   margin-left: 20vw;
 }
 
-form{
+#form{
   display: flex;
   flex-direction: column;
   width: 70%;
 }
 
-form [type="submit"]{
+#create-btn{
   margin-top: 10px;
   height: 50px;
   width: 50%;
