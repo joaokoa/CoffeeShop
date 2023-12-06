@@ -85,7 +85,7 @@ body * {
   box-sizing: border-box;
 }
 
-.textfield>label {
+.textfield>label, a {
   color: #f0ffffde;
   margin-bottom: 10px;
 }
