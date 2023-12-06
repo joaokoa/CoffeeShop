@@ -14,11 +14,11 @@ function getData() {
         senha: senha
     };
 
-    
+
     createAccount(url, dadosParaEnviar);
 }
 
-function createAccount(url, dados) {
+async function createAccount(url, dados) {
     return fetch(url, {
         method: 'POST',
         headers: {

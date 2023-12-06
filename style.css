@@ -171,6 +171,7 @@ footer .social-links a {
   body {
     flex-direction: column;
     text-align: center;
+    align-items: center;
   }
 
   header {
