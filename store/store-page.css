@@ -256,3 +256,36 @@ ul {
   object-fit: cover; /* Redimensiona a imagem para preencher o espaço sem distorcer */
   border-radius: 10px; /* Mantém o mesmo raio de borda que o card */
 }
+
+footer {
+  background-color: #2b134b;
+  color: white;
+  padding: 20px;
+  text-align: center; /* Alinha o conteúdo no centro */
+  max-width: 1200px;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  margin-top: 15px;
+}
+
+/* Estilo para todos os itens no footer */
+footer * {
+  margin: 0 10px;
+  display: inline-block; /* Permite alinhar horizontalmente */
+  text-align: center; /* Alinha o texto */
+}
+
+/* Estilizando os links no footer */
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Estilizando os links no hover */
+footer a:hover {
+  color: #77ffc0;
+}
+
+/* Estilo específico para os links das redes sociais */
+footer .social-links a {
+  font-weight: bold;
+}

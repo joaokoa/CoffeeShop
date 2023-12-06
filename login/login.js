@@ -71,7 +71,7 @@ function loginUser() {
         email: email,
         senha: senha
     };
-
+    
     authenticateUser(url, dadosParaEnviar);
 }
 
@@ -85,6 +85,7 @@ function authenticateUser(url, dados) {
     })
     .then(response => {
         if (!response.ok) {
+            
             // Se a resposta indicar um erro (status 4xx ou 5xx), trate isso aqui
             if (response.status === 401) { // Verifica se é um erro de credenciais inválidas (status 401)
                 alert('Credenciais inválidas!');
@@ -97,8 +98,8 @@ function authenticateUser(url, dados) {
     .then(data => {
         // Se a autenticação for bem-sucedida, 'data' conterá o token
         if (data && data.token) {
-            localStorage.setItem('token', data.token);
-            alert('Login bem-sucedido!'); // Ou redirecione para outra página, etc.
+            localStorage.setItem('token', 1);
+            window.location.href="../store/store-page.html";
         }
     })
     .catch(error => {

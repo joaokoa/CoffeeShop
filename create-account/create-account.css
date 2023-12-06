@@ -82,6 +82,7 @@ img{
   flex-direction: row;
   align-self: center;
   width: 30vw;
+  margin-left: 20vw;
 }
 
 form{
@@ -91,6 +92,7 @@ form{
 }
 
 form [type="submit"]{
+  margin-top: 10px;
   height: 50px;
   width: 50%;
   background-color: #00ff88;
@@ -98,6 +100,8 @@ form [type="submit"]{
   font-weight: 800;
   cursor: pointer;
   box-shadow: 0px 10px 40px -12px #00ff8052;
+  border: none;
+  border-radius: 20px;
 }
 
 input{
@@ -108,6 +112,41 @@ input{
   border: none;
   font-size: 15px;
 }
+
+
+footer {
+  background-color: #2b134b;
+  color: white;
+  padding: 20px;
+  text-align: center; /* Alinha o conteúdo no centro */
+  max-width: 1200px;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  margin-top: 15px;
+}
+
+/* Estilo para todos os itens no footer */
+footer * {
+  margin: 0 10px;
+  display: inline-block; /* Permite alinhar horizontalmente */
+  text-align: center; /* Alinha o texto */
+}
+
+/* Estilizando os links no footer */
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Estilizando os links no hover */
+footer a:hover {
+  color: #77ffc0;
+}
+
+/* Estilo específico para os links das redes sociais */
+footer .social-links a {
+  font-weight: bold;
+}
+
 
 @media screen and (max-width: 660px){
   body{

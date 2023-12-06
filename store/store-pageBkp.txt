@@ -1,3 +1,4 @@
+store-pageBkp.txt
 function getProductData() {
     let produtos = [];
     const url = "http://localhost:3333/produtos";
@@ -74,13 +75,11 @@ function getCategoryData() {
     });
 }
 
-
 async function handleProductData(categoriaId) {
-    
     try {
         // Obtenha os dados dos produtos
 
-
+        
 
         const dados = await getProductData();
 
@@ -136,23 +135,6 @@ async function handleProductData(categoriaId) {
 
 
 async function handleAwakeHandle() {
-    let token = localStorage.getItem('token');
-    alert(token);
-
-    // Se o token for igual a 1, oculte o link "Já tem uma conta?"
-    if (token == 1) {
-        alert('O usuário está logado.')
-        const inscrevaSeBtn = document.getElementById('inscreva-se-btn');
-        inscrevaSeBtn.style.display = 'none'; // Ou 'inline', ou qualquer valor desejado para exibir
-    }
-
-    // Se o token for igual a 0,
-    if (token == 0) {
-        alert('O usuário está deslogado.')
-        const logoutBtn = document.getElementById('logout-btn');
-        logoutBtn.style.display = 'none'; // Ou 'inline', ou qualquer valor desejado para exibir
-    }
-
     try {
         // Obtenha os dados dos produtos
         const dados = await getProductData();
@@ -169,7 +151,7 @@ async function handleAwakeHandle() {
         const title = document.createElement('h4');
         title.textContent = 'Produtos';
         containerProdutos.appendChild(title);
-
+        
         // Iterar sobre os dados em conjuntos de três produtos
         for (let i = 0; i < dados.length; i += 3) {
             // Criar uma nova div 'row-produtos' para cada conjunto de três produtos
@@ -190,10 +172,6 @@ async function handleAwakeHandle() {
                 const buttonComprar = document.createElement('button');
                 buttonComprar.classList.add('buttonComprar');
                 buttonComprar.textContent = 'Comprar';
-
-                // Adicione o evento onClick chamando a função handleAuthentication()
-                buttonComprar.onclick = handleAuthentication; // Passe o produto para a função se necessário
-                
                 divProduto.appendChild(buttonComprar);
 
                 // Adicione a div do produto ao conjunto atual
@@ -208,19 +186,6 @@ async function handleAwakeHandle() {
     }
 }
 
-function handleAuthentication() {
-    const token = localStorage.getItem('token');
-    if (token == 1) {
-        alert('Compra realizada com sucesso!');
-    }
-};
-
-function Logout() {
-    localStorage.setItem('token', 0);
-    window.location.reload();
-    // window.location.href = '../login/login-page.html';
-    alert('Você foi deslogado.');
-}
 
 function handleCategoryData() {
     const dados = getCategoryData();
@@ -277,4 +242,9 @@ function handleCategoryData() {
 }
 
 handleCategoryData();
-handleAwakeHandle()
+handleAwakeHandle();
+
+
+
+
+
